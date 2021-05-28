@@ -6,8 +6,8 @@ from types import FunctionType
 from socket import getfqdn
 if sys.version_info.major == 3:
     from queue import Queue as _Queue
-else:
-    from Queue import Queue as _Queue
+#else:
+#    from Queue import Queue as _Queue
 
 
 
@@ -101,7 +101,7 @@ class MasterNode():
             self.as_worker = True
             print("[INFO] Current node has joined the cluster as a Worker Node (using {} processors; Process ID: {}).".format(cpu_count(), self.process_as_worker.pid))
         
-    def start_master_server(self, if_join_as_worker = True):
+    def start_master_server(self, if_join_as_worker = False): #原 if_join_as_worker = True
         """
         Method to create a manager as the master node.
         

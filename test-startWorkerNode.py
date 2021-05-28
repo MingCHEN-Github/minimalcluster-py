@@ -1,7 +1,7 @@
 from minimalcluster import WorkerNode
 
-your_host = '0.0.0.0'
-your_port= 12345
+your_host = '127.0.0.1'
+your_port= 8888
 your_authkey = 'ming-auth'
 N_processors_to_use = 1
 
