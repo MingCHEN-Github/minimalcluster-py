@@ -156,7 +156,7 @@ master.register_target_function("example_factorize_naive")
 
 result = master.execute()
 
-for x in result.items()[:10]: # if running on Python 3, use `list(result.items())` rather than `result.items()`
+for x in list(result.items())[:10]: # if running on Python 3, use `list(result.items())` rather than `result.items()`
     print(x)
 ```
 
